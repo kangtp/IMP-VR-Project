@@ -8,6 +8,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/EatFoodScene.unity
+    guid: 8c398e1bee1f2ed4baee7903f3ea5229
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 49f90527718db194fb8f1c6d6d60daca,
       type: 2}
