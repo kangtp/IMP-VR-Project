@@ -10,12 +10,11 @@ public class Customer : MonoBehaviour
 
     private Animator CustomerAnimator;
     private NavMeshAgent navMeshAgent;
-
-    public Transform goalPosition;
-
     private Image Food_image;
-
     private int condition;
+
+    [SerializeField]
+    private GameObject PlayerPosition;
 
     void Start()
     {
@@ -49,7 +48,18 @@ public class Customer : MonoBehaviour
             CustomerAnimator.SetInteger("Condition",3);
         }
         */
-        
+
+        if(Vector3.Distance(this.transform.position,PlayerPosition.transform.position) < 7)
+        {
+            if(!Food_image.enabled)
+            {
+                Food_image.enabled = true;
+            } 
+        }
+        else
+        {
+            Food_image.enabled = false;
+        }
 
     }
 
