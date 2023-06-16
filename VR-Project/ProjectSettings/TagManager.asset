@@ -8,6 +8,15 @@ TagManager:
   - RightHand
   - LeftHand
   - food
+  - Pepper
+  - Chop
+  - Leg
+  - Peach
+  - Salami
+  - Slice
+  - Salmon
+  - Stick
+  - Tomato
   layers:
   - Default
   - TransparentFX
@@ -15,8 +24,8 @@ TagManager:
   - food
   - Water
   - UI
-  - 
-  - 
+  - Grab
+  - Body
   - 
   - 
   - 
