@@ -5,15 +5,27 @@ TagManager:
   serializedVersion: 2
   tags:
   - Goal
+  - RightHand
+  - LeftHand
+  - food
+  - Pepper
+  - Chop
+  - Leg
+  - Peach
+  - Salami
+  - Slice
+  - Salmon
+  - Stick
+  - Tomato
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - food
   - Water
   - UI
-  - 
-  - 
+  - Grab
+  - Body
   - 
   - 
   - 
