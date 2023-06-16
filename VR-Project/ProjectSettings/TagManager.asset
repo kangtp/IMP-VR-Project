@@ -3,15 +3,24 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Food
+  - Stick
+  - Pepper
+  - Chop
+  - Leg
+  - Peach
+  - Salami
+  - Slice
+  - Tomato
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Grab
   - Water
   - UI
-  - 
+  - Body
   - 
   - 
   - 
