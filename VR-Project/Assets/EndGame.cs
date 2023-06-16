@@ -11,6 +11,7 @@ public class EndGame : MonoBehaviour
     public GameObject[] simsaweeOne;
     public Image[] result;
     private int count = 0;
+    private int finishCount = 0;
     void Start()
     {
         
@@ -32,14 +33,26 @@ public class EndGame : MonoBehaviour
                {
                  count++;
                }
+               else if(a == 3)
+               {
+                finishCount++;
+               }
             }
+
 
             result[0].enabled = false;
             result[1].enabled = true;
 
-            result[1].GetComponentInChildren<Text>().text = "You are " + count + "Star Cheif~";
-
-            StartCoroutine("goTomenu");
+            if(finishCount < 2)
+            {
+                result[1].GetComponentInChildren<Text>().text = "There's a customer who hasn't received the food yet!";
+                finishCount = 0;
+            }
+            else
+            {
+                result[1].GetComponentInChildren<Text>().text = "You are " + count + "Star Cheif~";
+                StartCoroutine("goTomenu");
+            }
         }
     }
 
