@@ -32,7 +32,7 @@ public class RecognizeFood : MonoBehaviour
             if (checkFood[i] == true)
             {
                 Debug.Log("푸드포인트  i 인식" + i);
-                for (int j = 0; j < 7; j++)
+                for (int j = 0; j < 8; j++)
                 {
 
                     if (other.tag == childs[i].transform.GetChild(j).tag)

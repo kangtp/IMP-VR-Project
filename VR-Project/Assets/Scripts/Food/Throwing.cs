@@ -35,7 +35,7 @@ public class Throwing : MonoBehaviour
         "PepperGreen","LambChop","LambLeg","Peach","SalamiA","SalamiSlice","Salmon","Tomato"
     };
 
-    public static int[] MakingFoodArray()
+    public int[] MakingFoodArray()
     {
 
         int[] result = new int[40]; // 40 크기의 1차원 배열 생성
