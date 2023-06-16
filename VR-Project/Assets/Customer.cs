@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
 
 public class Customer : MonoBehaviour
 {
@@ -12,22 +13,27 @@ public class Customer : MonoBehaviour
 
     public Transform goalPosition;
 
+    private Image Food_image;
+
     private int condition;
 
     void Start()
     {
         CustomerAnimator = GetComponent<Animator>();
         navMeshAgent = GetComponent<NavMeshAgent>();
+        Food_image = GetComponentInChildren<Image>();
+        Food_image.enabled = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(CustomerAnimator.GetInteger("Condition"));
+
+        /*
         if(Input.GetKeyDown("w"))
         {
-            CustomerAnimator.SetInteger("Condition",0);
-            navMeshAgent.SetDestination(goalPosition.position);
+            //CustomerAnimator.SetInteger("Condition",0);
+            //navMeshAgent.SetDestination(goalPosition.position);
 
         }
         else if(Input.GetKeyDown("a"))
@@ -42,6 +48,8 @@ public class Customer : MonoBehaviour
         {
             CustomerAnimator.SetInteger("Condition",3);
         }
+        */
+        
 
     }
 
@@ -56,5 +64,10 @@ public class Customer : MonoBehaviour
     {
         yield return new WaitForSeconds(0.75f);
         CustomerAnimator.SetInteger("Condition",3);
+    }
+
+    IEnumerator NPC_Behavior()
+    {
+         yield return new WaitForSeconds(0.75f);
     }
 }
