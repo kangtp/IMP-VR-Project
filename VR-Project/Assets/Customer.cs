@@ -22,7 +22,7 @@ public class Customer : MonoBehaviour
         CustomerAnimator = GetComponent<Animator>();
         navMeshAgent = GetComponent<NavMeshAgent>();
         Food_image = GetComponentInChildren<Image>();
-        Food_image.enabled = false;
+        //Food_image.enabled = false;
     }
 
     // Update is called once per frame
@@ -38,11 +38,11 @@ public class Customer : MonoBehaviour
         }
         else if(Input.GetKeyDown("a"))
         {
-            CustomerAnimator.SetInteger("Condition",1);
+            CustomerAnimator.SetInteger("Condition",1); //happy
         }
         else if(Input.GetKeyDown("s"))
         {
-            CustomerAnimator.SetInteger("Condition",2);
+            CustomerAnimator.SetInteger("Condition",2); //angry
         }
         else if(Input.GetKeyDown("d"))
         {
@@ -51,6 +51,17 @@ public class Customer : MonoBehaviour
         */
         
 
+    }
+
+    public void Happy()
+    {
+        CustomerAnimator.SetInteger("Condition", 1);
+        Debug.Log("Happy dance");
+    }
+
+    public void Angry()
+    {
+        CustomerAnimator.SetInteger("Condition", 2);
     }
 
     private void OnTriggerEnter(Collider other) {
@@ -70,4 +81,6 @@ public class Customer : MonoBehaviour
     {
          yield return new WaitForSeconds(0.75f);
     }
+
+
 }

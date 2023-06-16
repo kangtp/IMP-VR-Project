@@ -5,11 +5,14 @@ TagManager:
   serializedVersion: 2
   tags:
   - Goal
+  - RightHand
+  - LeftHand
+  - food
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - food
   - Water
   - UI
   - 

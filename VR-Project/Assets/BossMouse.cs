@@ -2,14 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class mouse : MonoBehaviour
+public class BossMouse : MonoBehaviour
 {
-    public GameObject bigboy;
+    public GameObject boss;
     public AudioSource eatSound;
 
     private void Start()
     {
-        
+
     }
 
     private void OnTriggerEnter(Collider other)
@@ -17,8 +17,8 @@ public class mouse : MonoBehaviour
         if (other.CompareTag("food"))
         {
             eatSound.Play();
-            bigboy.GetComponent<Animator>().SetInteger("Condition", 1);
-            Debug.Log("bigboy eat");
+            boss.GetComponent<Animator>().SetInteger("Condition", 1);
+            Debug.Log("boss eat");
         }
 
     }
