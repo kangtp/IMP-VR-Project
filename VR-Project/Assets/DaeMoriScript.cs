@@ -23,6 +23,8 @@ public class DaeMoriScript : MonoBehaviour
         {
             gameObject.SetActive(false);
             eatMode.SetActive(true);
+            //skewer = FindObjectOfType<RecognizeFood>().GetSkewerFoods();
+
         }
     }
 }

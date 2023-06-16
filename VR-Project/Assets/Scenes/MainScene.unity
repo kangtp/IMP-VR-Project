@@ -5013,7 +5013,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   daeMori: {fileID: 1356746770}
-  eatSound: {fileID: 721699953}
+  audioSource: {fileID: 0}
+  goodEat: {fileID: 0}
+  badEat: {fileID: 0}
 --- !u!65 &721699955
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6956,6 +6958,12 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!1 &1104984498 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7937797408780020275, guid: 27fe84ac496e19944b9c65c7328751fd,
+    type: 3}
+  m_PrefabInstance: {fileID: 1865469802}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1132251641
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8067,6 +8075,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1881596569}
     m_Modifications:
+    - target: {fileID: 7205099809526929743, guid: a3a62f41399474a5cae8fcd48c1f3240,
+        type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7205099809526929747, guid: a3a62f41399474a5cae8fcd48c1f3240,
         type: 3}
       propertyPath: m_Size.y
@@ -10948,7 +10961,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84504ff5569932d47a9679c7e8afd7e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eatMode: {fileID: 0}
+  eatMode: {fileID: 1104984498}
 --- !u!1001 &2001548585
 PrefabInstance:
   m_ObjectHideFlags: 0
