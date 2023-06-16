@@ -64,23 +64,4 @@ public class Customer : MonoBehaviour
         CustomerAnimator.SetInteger("Condition", 2);
     }
 
-    private void OnTriggerEnter(Collider other) {
-        if(other.transform.tag == "Goal")
-        {
-            StartCoroutine("DetailStop");
-        }
-    }
-
-    IEnumerator DetailStop()
-    {
-        yield return new WaitForSeconds(0.75f);
-        CustomerAnimator.SetInteger("Condition",3);
-    }
-
-    IEnumerator NPC_Behavior()
-    {
-         yield return new WaitForSeconds(0.75f);
-    }
-
-
 }

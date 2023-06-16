@@ -7,7 +7,7 @@ public class RecognizeFood : MonoBehaviour
     // Start is called before the first frame update
     bool[] checkFood = { true, false, false, false }; //처음엔 5개 모두 비활성화 상태
     public GameObject[] childs;
-    private List<string> skewerFood;
+    private string[] skewerfoods = { "Null", "Null", "Null", "Null" };
 
 
     void Start()
@@ -40,6 +40,7 @@ public class RecognizeFood : MonoBehaviour
 
                        
                         childs[i].transform.GetChild(j).gameObject.SetActive(true);
+                        skewerfoods[i] = other.tag;
                         if (i == 3)
                         {
                             checkFood[3] = false;
@@ -66,9 +67,9 @@ public class RecognizeFood : MonoBehaviour
 
 
     }
-    public List<string> GetSkewerFoods()
+    public string[] GetSkewerFoods()
     {
-        return skewerFood;
+        return skewerfoods;
     }
 
 
