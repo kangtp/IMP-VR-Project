@@ -14,14 +14,14 @@ public class Throwing : MonoBehaviour
     /// </summary>
     public GameObject[] foodsPrefeb;
     public float speed;
-    private AudioSource _audioSource;
+    
     
     bool clear_lever = false;
     public Coroutine myCorutine;
     public int[] madeFoodArray;
     void Start()
     {
-        _audioSource = GetComponent<AudioSource>();
+        
         madeFoodArray = MakingFoodArray();
     }
     void Update()
@@ -140,7 +140,7 @@ public class Throwing : MonoBehaviour
     public void ThrowingFood(GameObject food)
     {
         Vector3 dir = gameObject.transform.forward;
-        _audioSource.Play();
+       
         food.GetComponent<Rigidbody>().velocity = dir * speed;
         Destroy(food, 7f);
 

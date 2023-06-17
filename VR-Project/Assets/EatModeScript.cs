@@ -10,15 +10,17 @@ public class EatModeScript : MonoBehaviour
     public AudioClip badEat;
     public string[] skewer;
     private string[] mySkewer;
+    public GameObject trashFunction;
+    private bool feed = false;
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Stick"))
+        if (other.CompareTag("Stick") && !feed)
         {
             gameObject.SetActive(false);
             eatMode.SetActive(true);
             Debug.Log("Collider");
-
+            feed = true;
         }
     }
     public void CheckSkewer()
@@ -34,6 +36,7 @@ public class EatModeScript : MonoBehaviour
                 audioSource.Play();
                 gameObject.GetComponent<Animator>().SetInteger("Condition", 2);    //angry
                 Debug.Log("이거 아니잖아");
+                trashFunction.GetComponent<TrashBin>().Reset();
                 return;
             }
         }
@@ -42,6 +45,7 @@ public class EatModeScript : MonoBehaviour
         audioSource.Play();
         gameObject.GetComponent<Animator>().SetInteger("Condition", 1);    //happy
         Debug.Log("음 좋아요");
+        trashFunction.GetComponent<TrashBin>().Reset();
         return;
     }
 }

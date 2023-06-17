@@ -3,18 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class EndGame : MonoBehaviour
 {
     // Start is called before the first frame update
 
     public GameObject[] simsaweeOne;
-    public GameObject[] result;
+
+    public Text Result;
     private int count = 0;
     private int finishCount = 0;
+    private int angrystack = 0;
+    bool AAAAAA;
     void Start()
     {
-        
+        AAAAAA = true;
     }
 
     // Update is called once per frame
@@ -26,32 +30,35 @@ public class EndGame : MonoBehaviour
     private void OnTriggerEnter(Collider other) {
         if(other.CompareTag("Stick"))
         {
-            for(int i = 0; i < 3; i++)
+            finishCount = 0;
+            count = 0;
+            for (int i = 0; i < 3; i++)
             {
                int a = simsaweeOne[i].GetComponent<Animator>().GetInteger("Condition");
                if(a == 1)
                {
                  count++;
                }
-               else if(a == 3)
+               if(a == 2)
                {
-                finishCount++;
+                 angrystack++;
+               }
+               if(a == 3)
+               {
+                   finishCount++;
+                   Debug.Log(finishCount);
                }
             }
 
-
-            result[0].SetActive(false);
-            result[1].SetActive(true);
-
-            if(finishCount < 2)
+            if(finishCount > 0)
             {
-                result[1].GetComponentInChildren<Text>().text = "There's a customer who hasn't received the food yet!";
-                finishCount = 0;
-                count = 0;
+                Result.text = "There's a customer who hasn't received the food yet!";
+                
             }
-            else
+            else if(finishCount == 0 && AAAAAA)
             {
-                result[1].GetComponentInChildren<Text>().text = "You are " + count + "Star Cheif~";
+                AAAAAA = false;
+                Result.text = "You are " + count + "Star Cheif~";
                 StartCoroutine("goTomenu");
             }
         }

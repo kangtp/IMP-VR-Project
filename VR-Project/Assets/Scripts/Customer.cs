@@ -21,6 +21,8 @@ public class Customer : MonoBehaviour
         CustomerAnimator = GetComponent<Animator>();
         navMeshAgent = GetComponent<NavMeshAgent>();
         Food_image = GetComponentInChildren<Image>();
+
+        GetComponent<Animator>().SetInteger("Condition",3);
         //Food_image.enabled = false;
     }
 

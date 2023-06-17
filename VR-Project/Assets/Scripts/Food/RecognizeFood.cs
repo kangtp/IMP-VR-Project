@@ -8,11 +8,12 @@ public class RecognizeFood : MonoBehaviour
     public bool[] checkFood = { true, false, false, false }; //ó���� 5�� ��� ��Ȱ��ȭ ����
     public GameObject[] childs;
     public string[] skewerfoods = { "Null", "Null", "Null", "Null" };
+    private AudioSource _audioSource;
 
 
     void Start()
     {
-
+        _audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -38,8 +39,9 @@ public class RecognizeFood : MonoBehaviour
                     if (other.tag == childs[i].transform.GetChild(j).tag)
                     {
 
-                       
+                        
                         childs[i].transform.GetChild(j).gameObject.SetActive(true);
+                        _audioSource.Play();
                         skewerfoods[i] = other.tag;
                         if (i == 3)
                         {
