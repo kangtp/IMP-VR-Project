@@ -54,7 +54,7 @@ public class RecognizeFood : MonoBehaviour
                         }
                         foodRecoginze = true;//The food that is now flying has been recognized
                         Destroy(other.gameObject);//destroy flying food 
-                        Debug.Log(childs[i].transform.GetChild(j).gameObject.tag + "����");//just test
+                        
 
                         break;
                     }

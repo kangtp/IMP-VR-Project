@@ -61,12 +61,12 @@ public class Throwing2 : MonoBehaviour
 
         for (int i = 0; i < 40; i++)
         {
-            foodIndex = foods.IndexOf(foodList[i]); // 음식 인덱스 가져옴
-            result[i] = foodIndex; // 해당 인덱스로 배열에 저장
-            cnt[foodIndex]++; // 음식 카운트 증가
+            foodIndex = foods.IndexOf(foodList[i]); 
+            result[i] = foodIndex; 
+            cnt[foodIndex]++; 
         }
 
-        return result; // 완성된 배열 리턴
+        return result; 
     }
     public IEnumerator MakeFood(int[] foodArray)
     {

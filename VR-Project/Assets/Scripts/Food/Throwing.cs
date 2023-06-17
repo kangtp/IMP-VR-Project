@@ -6,10 +6,7 @@ public class Throwing : MonoBehaviour
 {
     // Start is called before the first frame update
     /// <summary>
-    ///  1.makingFoodArray => 여러종류의 음식이 각각 5번씩 발사되기 위한 배열을 만들고 섞어주는 함수!
-    ///  2.MakingFood => 배열을 받고 그 배열의 인덱스를 각각 읽어서 맞는 번호에 따른 음식 생성을 하는 함수!
-    ///   ++ 발사도 함. 
-    ///  그리고 lever의 foodFireState(bool형)에 따라 발사되거나 발사가 멈춤 아마 내 생각엔 레버를 당기기 전까진 계속 무한으로 발사할거임
+    ///  
     ///
     /// </summary>
     public GameObject[] foodsPrefeb; // flying food prefebs

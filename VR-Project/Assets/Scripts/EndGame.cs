@@ -18,14 +18,17 @@ public class EndGame : MonoBehaviour
     private int finishCount = 0; // when customer didn't eat food and then add this value
     private int angrystack = 0; // when customer angry add this value;
     bool AAAAAA; // this is a value of control Ring a bell;
+    private AudioSource _audioSource;
     void Start()
     {
         AAAAAA = true; // first set AAAAAA true. because it is has to be Call One Time!!!
+        _audioSource = GetComponent<AudioSource>();
     }
 
     private void OnTriggerEnter(Collider other) {
         if(other.CompareTag("Stick")) // if hit bell by stick
         {
+            _audioSource.Play();
             finishCount = 0; // set 0
             count = 0; // set 0
             for (int i = 0; i < 3; i++) // number of customer's are 3 so loop 3time~
@@ -52,8 +55,10 @@ public class EndGame : MonoBehaviour
             }
             else if(finishCount == 0 && AAAAAA) // if all customer ate food Call goTomenu();
             {
+                
                 AAAAAA = false; // change condition
-                Result.text = "You are " + count + "Star Cheif~"; // change Text
+                Result.text = "You are " + count + "Star Chef~"; // change Text
+            
                 StartCoroutine("goTomenu"); // call coroutine
             }
         }
