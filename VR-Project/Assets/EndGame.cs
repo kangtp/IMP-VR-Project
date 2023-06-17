@@ -47,6 +47,7 @@ public class EndGame : MonoBehaviour
             {
                 result[1].GetComponentInChildren<Text>().text = "There's a customer who hasn't received the food yet!";
                 finishCount = 0;
+                count = 0;
             }
             else
             {
