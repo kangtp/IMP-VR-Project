@@ -19,6 +19,4 @@ public class leverActionController : MonoBehaviour
     {
         Debug.Log("Zero reached!");
     }
-
-
 }

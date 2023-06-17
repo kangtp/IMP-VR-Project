@@ -8,13 +8,13 @@ public class Customer : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    private Animator CustomerAnimator;
-    private NavMeshAgent navMeshAgent;
+    private Animator CustomerAnimator; // 
+    private NavMeshAgent navMeshAgent; // this is a naveMeshAgent to use AI funtion.
     private Image Food_image;
-    private int condition;
+    private int condition; // To change Animation Condition.
 
    
-    public GameObject PlayerPosition;
+    public GameObject PlayerPosition; // to get player Position
 
     void Start()
     {
@@ -22,60 +22,18 @@ public class Customer : MonoBehaviour
         navMeshAgent = GetComponent<NavMeshAgent>();
         Food_image = GetComponentInChildren<Image>();
 
-        GetComponent<Animator>().SetInteger("Condition",3);
+        GetComponent<Animator>().SetInteger("Condition",3); // 3 is a Idle condition
         //Food_image.enabled = false;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Happy() // set Condition Happy
     {
-
-        /*
-        if(Input.GetKeyDown("w"))
-        {
-            //CustomerAnimator.SetInteger("Condition",0);
-            //navMeshAgent.SetDestination(goalPosition.position);
-
-        }
-        else if(Input.GetKeyDown("a"))
-        {
-            CustomerAnimator.SetInteger("Condition",1); //happy
-        }
-        else if(Input.GetKeyDown("s"))
-        {
-            CustomerAnimator.SetInteger("Condition",2); //angry
-        }
-        else if(Input.GetKeyDown("d"))
-        {
-            CustomerAnimator.SetInteger("Condition",3);
-        }
-        */
-
-        /*
-        if(Vector3.Distance(this.transform.position, PlayerPosition.transform.position) < 7)
-        {
-            if(!Food_image.enabled)
-            {
-                Food_image.enabled = true;
-            } 
-        }
-        else
-        {
-            Food_image.enabled = false;
-        }
-        */
-
+        CustomerAnimator.SetInteger("Condition", 1); // 1 is a Happy Condition
     }
 
-    public void Happy()
+    public void Angry() // set condition Angry
     {
-        CustomerAnimator.SetInteger("Condition", 1);
-        Debug.Log("Happy dance");
-    }
-
-    public void Angry()
-    {
-        CustomerAnimator.SetInteger("Condition", 2);
+        CustomerAnimator.SetInteger("Condition", 2); // 2 is a Angry Condition
     }
 
 }

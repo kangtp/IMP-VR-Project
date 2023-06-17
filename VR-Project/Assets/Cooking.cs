@@ -4,27 +4,22 @@ using UnityEngine;
 
 public class Cooking : MonoBehaviour
 {
-
+    // this script is about cooking skrewe
     private ParticleSystem smoke;
 
     void Start()
     {
-        smoke = GetComponentInChildren<ParticleSystem>();
-    }
-
-    private void Update() {
-
-        
+        smoke = GetComponentInChildren<ParticleSystem>(); // getcomponent of Particlesystem
     }
 
     public void CookSmoke()
     {
-        smoke.Play();   
+        smoke.Play();  // play particle system
     }
 
     public void Stopcook()
     {
-        smoke.Stop();
+        smoke.Stop(); //stop particle system
     }
    
 }
