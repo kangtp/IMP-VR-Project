@@ -9,7 +9,7 @@ public class EndGame : MonoBehaviour
     // Start is called before the first frame update
 
     public GameObject[] simsaweeOne;
-    public Image[] result;
+    public GameObject[] result;
     private int count = 0;
     private int finishCount = 0;
     void Start()
@@ -40,8 +40,8 @@ public class EndGame : MonoBehaviour
             }
 
 
-            result[0].enabled = false;
-            result[1].enabled = true;
+            result[0].SetActive(false);
+            result[1].SetActive(true);
 
             if(finishCount < 2)
             {
