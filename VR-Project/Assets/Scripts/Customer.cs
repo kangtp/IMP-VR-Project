@@ -13,8 +13,8 @@ public class Customer : MonoBehaviour
     private Image Food_image;
     private int condition;
 
-    [SerializeField]
-    private GameObject PlayerPosition;
+   
+    public GameObject PlayerPosition;
 
     void Start()
     {
@@ -49,7 +49,8 @@ public class Customer : MonoBehaviour
         }
         */
 
-        if(Vector3.Distance(this.transform.position,PlayerPosition.transform.position) < 7)
+        /*
+        if(Vector3.Distance(this.transform.position, PlayerPosition.transform.position) < 7)
         {
             if(!Food_image.enabled)
             {
@@ -60,6 +61,7 @@ public class Customer : MonoBehaviour
         {
             Food_image.enabled = false;
         }
+        */
 
     }
 
