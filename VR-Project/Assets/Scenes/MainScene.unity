@@ -5049,9 +5049,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 721699951}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5cfe957a35dbd6c48aa32cf98c3e5825, type: 3}
+  m_Script: {fileID: 11500000, guid: 491a6cd8fecf5844183db97059901150, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  original: {fileID: 1356746770}
 --- !u!65 &721699955
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5233,7 +5234,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Ring the bell when you're done cooking. with your Poke!!!!!!!!!
+  m_Text: Ring the bell when you're done cooking. with your Fork!!!!!!!!!
 --- !u!222 &755011308
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7211,6 +7212,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5342558559561947824, guid: fd0e4fc17a5c67740bd102ee3a32194e,
+        type: 3}
+      propertyPath: PlayerPosition
+      value: 
+      objectReference: {fileID: 1147990471}
     - target: {fileID: 5342558559561947830, guid: fd0e4fc17a5c67740bd102ee3a32194e,
         type: 3}
       propertyPath: m_Enabled
@@ -8439,8 +8445,8 @@ MonoBehaviour:
   - {fileID: 1632520413}
   - {fileID: 1161192119}
   result:
-  - {fileID: 873443920}
-  - {fileID: 1161083187}
+  - {fileID: 873443918}
+  - {fileID: 1161083185}
 --- !u!1 &1557776200 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2959253056227366543, guid: 02097c86947d9fa4aad6fa70b2bfdf09,
@@ -9936,9 +9942,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1850909134}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5cfe957a35dbd6c48aa32cf98c3e5825, type: 3}
+  m_Script: {fileID: 11500000, guid: 491a6cd8fecf5844183db97059901150, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  original: {fileID: 1161192119}
 --- !u!1001 &1857345575
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10141,6 +10148,11 @@ PrefabInstance:
       propertyPath: m_IsKinematic
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7127458224476018558, guid: 27fe84ac496e19944b9c65c7328751fd,
+        type: 3}
+      propertyPath: PlayerPosition
+      value: 
+      objectReference: {fileID: 1147990471}
     - target: {fileID: 7305797384698146953, guid: 27fe84ac496e19944b9c65c7328751fd,
         type: 3}
       propertyPath: m_RootOrder
@@ -10424,9 +10436,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1873765092}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5cfe957a35dbd6c48aa32cf98c3e5825, type: 3}
+  m_Script: {fileID: 11500000, guid: 491a6cd8fecf5844183db97059901150, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  original: {fileID: 0}
 --- !u!1 &1881596568
 GameObject:
   m_ObjectHideFlags: 0
@@ -11768,6 +11781,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2724687842850040802, guid: 02097c86947d9fa4aad6fa70b2bfdf09,
+        type: 3}
+      propertyPath: PlayerPosition
+      value: 
+      objectReference: {fileID: 1147990471}
     - target: {fileID: 2724687842850040803, guid: 02097c86947d9fa4aad6fa70b2bfdf09,
         type: 3}
       propertyPath: m_Enabled
