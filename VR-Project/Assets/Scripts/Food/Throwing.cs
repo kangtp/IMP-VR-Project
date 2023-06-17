@@ -12,17 +12,17 @@ public class Throwing : MonoBehaviour
     ///  그리고 lever의 foodFireState(bool형)에 따라 발사되거나 발사가 멈춤 아마 내 생각엔 레버를 당기기 전까진 계속 무한으로 발사할거임
     ///
     /// </summary>
-    public GameObject[] foodsPrefeb;
-    public float speed;
+    public GameObject[] foodsPrefeb; // flying food prefebs
+    public float speed;//flying speed
     
     
-    bool clear_lever = false;
-    public Coroutine myCorutine;
-    public int[] madeFoodArray;
+   
+    public Coroutine myCorutine;//it is need because when lever is pull then fire food
+    public int[] madeFoodArray;//it is the arrangement required to fire food
     void Start()
     {
         
-        madeFoodArray = MakingFoodArray();
+        madeFoodArray = MakingFoodArray();//make flying foods array
     }
     void Update()
     {
@@ -32,21 +32,21 @@ public class Throwing : MonoBehaviour
     {
 
     }
-    public static List<string> foods = new List<string>() {
+    public static List<string> foods = new List<string>() { // it is food name list
         "PepperGreen","LambChop","LambLeg","Peach","SalamiA","SalamiSlice","Salmon","Tomato"
     };
 
     public int[] MakingFoodArray()
     {
 
-        int[] result = new int[40]; // 40 크기의 1차원 배열 생성
-        int[] cnt = new int[8]; // 각 음식이 몇 번씩 들어갔는지 세는 배열
-        int foodIndex; // 랜덤한 음식의 인덱스
+        int[] result = new int[40]; //an arrangement containing the order in which food is fired
+        int[] cnt = new int[8]; // an arrangement that counts how many times each food is in it
+        int foodIndex; //food index
 
 
 
-        List<string> foodList = new List<string>();
-        foreach (string food in foods)
+        List<string> foodList = new List<string>();// an arrangement containing food names
+        foreach (string food in foods)//For function to allow 5 pieces of each dish to go in
         {
             for (int i = 0; i < 5; i++)
             {
@@ -55,7 +55,7 @@ public class Throwing : MonoBehaviour
         }
 
 
-        for (int i = 0; i < 40; i++)
+        for (int i = 0; i < 40; i++)// The part to mix the arrangements
         {
             int j = Random.Range(i, 40);
             string tmp = foodList[i];
@@ -66,18 +66,18 @@ public class Throwing : MonoBehaviour
 
         for (int i = 0; i < 40; i++)
         {
-            foodIndex = foods.IndexOf(foodList[i]); // 음식 인덱스 가져옴
-            result[i] = foodIndex; // 해당 인덱스로 배열에 저장
-            cnt[foodIndex]++; // 음식 카운트 증가
+            foodIndex = foods.IndexOf(foodList[i]); // Importing index
+            result[i] = foodIndex; // Save array to that index
+            cnt[foodIndex]++; // count increase
         }
 
-        return result; // 완성된 배열 리턴
+        return result; //return result
     }
-    public IEnumerator MakeFood(int[] foodArray)
+    public IEnumerator MakeFood(int[] foodArray) //it instantiate food and fire
     {
-        while (true)
+        while (true) // Unlimited fire until the lever is pulled
         {
-            for (int i = 0; i < foodArray.Length; i++)
+            for (int i = 0; i < foodArray.Length; i++)//food array(foodprefeb index) ,Create the right game object based on the number
             {
                 if (foodArray[i] == 0)
                 {
@@ -132,12 +132,12 @@ public class Throwing : MonoBehaviour
 
 
                 }
-                yield return new WaitForSeconds(3f);
+                yield return new WaitForSeconds(3f);// Launch in 3 seconds after launch
 
             }
         }
     }
-    public void ThrowingFood(GameObject food)
+    public void ThrowingFood(GameObject food)// Code for flying food
     {
         Vector3 dir = gameObject.transform.forward;
        

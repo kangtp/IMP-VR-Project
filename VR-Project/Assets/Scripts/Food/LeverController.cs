@@ -5,9 +5,9 @@ using UnityEngine;
 public class LeverController : MonoBehaviour
 {
     // Start is called before the first frame update
-    public bool activate = false;
-    public GameObject spawnPoint;
-    public GameObject spawnPoint2;
+    public bool activate = false;//Lever state
+    public GameObject spawnPoint; // spawn point1
+    public GameObject spawnPoint2;// spawn point2
     void Start()
     {
 
@@ -22,20 +22,20 @@ public class LeverController : MonoBehaviour
 
     public void Activate()
     {
-        if (spawnPoint != null)
+        if (spawnPoint != null) // spawin point is not null
         {
-            if (spawnPoint.GetComponent<Throwing>().myCorutine == null)
+            if (spawnPoint.GetComponent<Throwing>().myCorutine == null)// Now, spawnpoint is not active
             {
-                spawnPoint.GetComponent<Throwing>().myCorutine = StartCoroutine(spawnPoint.GetComponent<Throwing>().MakeFood(spawnPoint.GetComponent<Throwing>().madeFoodArray));
-                spawnPoint2.GetComponent<Throwing2>().myCorutine = StartCoroutine(spawnPoint2.GetComponent<Throwing2>().MakeFood(spawnPoint2.GetComponent<Throwing2>().madeFoodArray));
+                spawnPoint.GetComponent<Throwing>().myCorutine = StartCoroutine(spawnPoint.GetComponent<Throwing>().MakeFood(spawnPoint.GetComponent<Throwing>().madeFoodArray));//make spawnpoint active
+                spawnPoint2.GetComponent<Throwing2>().myCorutine = StartCoroutine(spawnPoint2.GetComponent<Throwing2>().MakeFood(spawnPoint2.GetComponent<Throwing2>().madeFoodArray));//make spawnpoint2 active
 
             }
             else
             {
-                StopCoroutine(spawnPoint.GetComponent<Throwing>().myCorutine);
-                spawnPoint.GetComponent<Throwing>().myCorutine = null;
+                StopCoroutine(spawnPoint.GetComponent<Throwing>().myCorutine); // Now,spawnpoin active
+                spawnPoint.GetComponent<Throwing>().myCorutine = null; // maek stop
                 StopCoroutine(spawnPoint2.GetComponent<Throwing2>().myCorutine);
-                spawnPoint2.GetComponent<Throwing2>().myCorutine = null;
+                spawnPoint2.GetComponent<Throwing2>().myCorutine = null;//make stop
             }
         }
     }

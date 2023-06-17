@@ -5,12 +5,8 @@ using UnityEngine;
 public class Throwing2 : MonoBehaviour
 {
     // Start is called before the first frame update
-    /// <summary>
-    ///  1.makingFoodArray => 여러종류의 음식이 각각 5번씩 발사되기 위한 배열을 만들고 섞어주는 함수!
-    ///  2.MakingFood => 배열을 받고 그 배열의 인덱스를 각각 읽어서 맞는 번호에 따른 음식 생성을 하는 함수!
-    ///   ++ 발사도 함. 
-    ///  그리고 lever의 foodFireState(bool형)에 따라 발사되거나 발사가 멈춤 아마 내 생각엔 레버를 당기기 전까진 계속 무한으로 발사할거임
-    ///
+    /// 
+    /// To have two identical points in a different arrangement than the "throw" script
     /// </summary>
     public GameObject[] foodsPrefeb;
     public float speed;
@@ -38,9 +34,9 @@ public class Throwing2 : MonoBehaviour
     public int[] MakingFoodArray()
     {
 
-        int[] result = new int[40]; // 40 크기의 1차원 배열 생성
-        int[] cnt = new int[8]; // 각 음식이 몇 번씩 들어갔는지 세는 배열
-        int foodIndex; // 랜덤한 음식의 인덱스
+        int[] result = new int[40]; 
+        int[] cnt = new int[8]; 
+        int foodIndex; 
 
 
 

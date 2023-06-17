@@ -5,15 +5,15 @@ using UnityEngine.XR.Interaction.Toolkit;
 public class RecognizeFood : MonoBehaviour
 {
     // Start is called before the first frame update
-    public bool[] checkFood = { true, false, false, false }; //ó���� 5�� ��� ��Ȱ��ȭ ����
-    public GameObject[] childs;
-    public string[] skewerfoods = { "Null", "Null", "Null", "Null" };
-    private AudioSource _audioSource;
+    public bool[] checkFood = { true, false, false, false }; //Food point in fork recognize state
+    public GameObject[] childs;// it is fork point gameobject array
+    public string[] skewerfoods = { "Null", "Null", "Null", "Null" }; //recognize food array
+    private AudioSource _audioSource;//audiosource to play
 
 
     void Start()
     {
-        _audioSource = GetComponent<AudioSource>();
+        _audioSource = GetComponent<AudioSource>();//Get audioComponent
     }
 
     // Update is called once per frame
@@ -25,42 +25,42 @@ public class RecognizeFood : MonoBehaviour
     {
 
 
-        Debug.Log("Food �ν�");
-        Destroy(other.gameObject.GetComponent<MeshCollider>());
+        
+        Destroy(other.gameObject.GetComponent<MeshCollider>()); // destroy other meshcollider
         for (int i = 0; i < checkFood.Length; i++)
         {
-            bool foodRecoginze = false;
+            bool foodRecoginze = false;//food recognize state
             if (checkFood[i] == true)
             {
-                Debug.Log("Ǫ������Ʈ  i �ν�" + i);
-                for (int j = 0; j < 8; j++)
+                 
+                for (int j = 0; j < 8; j++)//to access ForkPoint(foods in fork)
                 {
 
-                    if (other.tag == childs[i].transform.GetChild(j).tag)
+                    if (other.tag == childs[i].transform.GetChild(j).tag)//if other tag == foodpint child tag
                     {
 
                         
-                        childs[i].transform.GetChild(j).gameObject.SetActive(true);
-                        _audioSource.Play();
-                        skewerfoods[i] = other.tag;
-                        if (i == 3)
+                        childs[i].transform.GetChild(j).gameObject.SetActive(true);//child of foodpoint set true then foodpoint[i].[j] is active
+                        _audioSource.Play();//when succes play sound 
+                        skewerfoods[i] = other.tag;// because other object need recognize food so made array
+                        if (i == 3)// because in order to be recognized
                         {
-                            checkFood[3] = false;
+                            checkFood[3] = false;// because To avoid over-array errors
                         }
                         else
                         {
-                            checkFood[i] = false;
+                            checkFood[i] = false; // In order not to be recognized
                             checkFood[i + 1] = true;
                         }
-                        foodRecoginze = true;
-                        Destroy(other.gameObject);
-                        Debug.Log(childs[i].transform.GetChild(j).gameObject.tag + "����");
+                        foodRecoginze = true;//The food that is now flying has been recognized
+                        Destroy(other.gameObject);//destroy flying food 
+                        Debug.Log(childs[i].transform.GetChild(j).gameObject.tag + "����");//just test
 
                         break;
                     }
                 }
             }
-            if (foodRecoginze)
+            if (foodRecoginze)//to avoid the repetition
             {
                 break;
             }
@@ -71,7 +71,7 @@ public class RecognizeFood : MonoBehaviour
     }
     public string[] GetSkewerFoods()
     {
-        return skewerfoods;
+        return skewerfoods;//return recognize fork foods array
     }
 
 

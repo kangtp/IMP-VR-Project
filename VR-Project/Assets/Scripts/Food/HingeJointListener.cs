@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class HingeJointListener : MonoBehaviour
+public class HingeJointListener : MonoBehaviour  //Script to run the function when the lever is pulled
 {
     [SerializeField]
     private float angleThreshold = 10;
