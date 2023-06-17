@@ -6,46 +6,51 @@ public class EatModeScript : MonoBehaviour
 {
     public GameObject eatMode;
     public AudioSource audioSource;
-    public AudioClip goodEat;
+    public AudioClip goodEat;   
     public AudioClip badEat;
-    public string[] skewer;
-    private string[] mySkewer;
-    public GameObject trashFunction;
-    private bool feed = false;
+    public string[] skewer; //skewer that customer want
+    private string[] mySkewer;  //skewer that I made
+    public GameObject trashFunction;    
+    private bool feed = false; 
 
+    //If you touch customer with skewer, customer change into EatMode
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Stick") && !feed)
         {
-            gameObject.SetActive(false);
-            eatMode.SetActive(true);
-            Debug.Log("Collider");
-            feed = true;
+            gameObject.SetActive(false);    //this original prefab set false
+            eatMode.SetActive(true);    //eatMode prefab set true
+            feed = true;    //to feed once
         }
     }
+
+    //to compare skewer I made with skewer customer want
     public void CheckSkewer()
     {
         eatMode.SetActive(false);
         gameObject.SetActive(true);
-        mySkewer = FindObjectOfType<RecognizeFood>().GetSkewerFoods();
+
+        //Get the information of the skewers I made. (ingredient order)
+        mySkewer = FindObjectOfType<RecognizeFood>().GetSkewerFoods();  
+
         for (int i = 0; i < mySkewer.Length; i++)
         {
-            if (mySkewer[i] != skewer[i]) //꼬치가 주문한 거랑 다르면
+            //Play angry animation if one is different
+            if (mySkewer[i] != skewer[i])
             {
-                audioSource.clip = badEat;
+                audioSource.clip = badEat;  //angry reaction
                 audioSource.Play();
-                gameObject.GetComponent<Animator>().SetInteger("Condition", 2);    //angry
-                Debug.Log("이거 아니잖아");
-                trashFunction.GetComponent<TrashBin>().Reset();
+                gameObject.GetComponent<Animator>().SetInteger("Condition", 2);    //angry animation
+                trashFunction.GetComponent<TrashBin>().Reset(); //skewer reset
                 return;
             }
         }
-        //주문한 거랑 같으면
-        audioSource.clip = goodEat;
+
+        //Play happy animation if it's all the same
+        audioSource.clip = goodEat; //happy reaction
         audioSource.Play();
-        gameObject.GetComponent<Animator>().SetInteger("Condition", 1);    //happy
-        Debug.Log("음 좋아요");
-        trashFunction.GetComponent<TrashBin>().Reset();
+        gameObject.GetComponent<Animator>().SetInteger("Condition", 1);    //happy animation
+        trashFunction.GetComponent<TrashBin>().Reset(); //skewer reset
         return;
     }
 }
