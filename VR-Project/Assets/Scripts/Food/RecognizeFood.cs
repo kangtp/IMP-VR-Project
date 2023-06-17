@@ -5,9 +5,9 @@ using UnityEngine.XR.Interaction.Toolkit;
 public class RecognizeFood : MonoBehaviour
 {
     // Start is called before the first frame update
-    bool[] checkFood = { true, false, false, false }; //Ã³À½¿£ 5°³ ¸ðµÎ ºñÈ°¼ºÈ­ »óÅÂ
+    public bool[] checkFood = { true, false, false, false }; //Ã³ï¿½ï¿½ï¿½ï¿½ 5ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½È°ï¿½ï¿½È­ ï¿½ï¿½ï¿½ï¿½
     public GameObject[] childs;
-    private string[] skewerfoods = { "Null", "Null", "Null", "Null" };
+    public string[] skewerfoods = { "Null", "Null", "Null", "Null" };
 
 
     void Start()
@@ -24,14 +24,14 @@ public class RecognizeFood : MonoBehaviour
     {
 
 
-        Debug.Log("Food ÀÎ½Ä");
+        Debug.Log("Food ï¿½Î½ï¿½");
         Destroy(other.gameObject.GetComponent<MeshCollider>());
         for (int i = 0; i < checkFood.Length; i++)
         {
             bool foodRecoginze = false;
             if (checkFood[i] == true)
             {
-                Debug.Log("ÇªµåÆ÷ÀÎÆ®  i ÀÎ½Ä" + i);
+                Debug.Log("Çªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®  i ï¿½Î½ï¿½" + i);
                 for (int j = 0; j < 8; j++)
                 {
 
@@ -52,7 +52,7 @@ public class RecognizeFood : MonoBehaviour
                         }
                         foodRecoginze = true;
                         Destroy(other.gameObject);
-                        Debug.Log(childs[i].transform.GetChild(j).gameObject.tag + "²ÉÈû");
+                        Debug.Log(childs[i].transform.GetChild(j).gameObject.tag + "ï¿½ï¿½ï¿½ï¿½");
 
                         break;
                     }
