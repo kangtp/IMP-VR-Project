@@ -15,7 +15,7 @@
 - 멤버: 팀 정현지(이정현, 김민정, 김민지)
 
 ## 게임 설명
-|![image](https://github.com/user-attachments/assets/9323a271-d584-4b59-84ca-5edb9af536df)|![image](https://user-images.githubusercontent.com/66003567/216818272-8749569b-b217-4572-9738-32b0058459f4.png)|
+|![image](https://github.com/user-attachments/assets/9323a271-d584-4b59-84ca-5edb9af536df)|![image](https://github.com/user-attachments/assets/3dc7c51d-a3f2-4c9d-843f-7ad5b61e8fa2)|
 |:---:|:---:|
 |시작 화면|사용자 정보 화면|
 
