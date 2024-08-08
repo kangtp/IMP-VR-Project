@@ -1,4 +1,5 @@
 <div align="center">
+  ![StartScene](https://github.com/user-attachments/assets/9323a271-d584-4b59-84ca-5edb9af536df)
 <h2> VR 꼬치 타이쿤 게임: Ajou Ramsey 🍡</h2>
 날아오는 식재료를 꽂아 손님에게 제공하는 VR 꼬치 타이쿤 게임입니다!<br> VR 기기를 착용하고 직접 손을 뻗어 식재료를 꽂아보세요! 그리고 만든 꼬치를 가지고 손님에게 다가가 먹여주세요! <br>👨‍🍳 최고의 셰프가 되기 위해 노력해보세요! 🧑‍🍳
 </div>
