@@ -15,7 +15,7 @@
 - 팀 구성: 강현서, 박선준, 양경덕, Nitu Cristina (개발 4)
 
 ## 게임 설명
-|<img src="https://github.com/user-attachments/assets/9323a271-d584-4b59-84ca-5edb9af536df width="200" height="400"/>|![image](https://github.com/user-attachments/assets/3dc7c51d-a3f2-4c9d-843f-7ad5b61e8fa2)|
+|<img src="https://github.com/user-attachments/assets/9323a271-d584-4b59-84ca-5edb9af536df" width="200" height="400"/>|![image](https://github.com/user-attachments/assets/3dc7c51d-a3f2-4c9d-843f-7ad5b61e8fa2)|
 |:---:|:---:|
 |시작 화면|플레이 화면|
 
