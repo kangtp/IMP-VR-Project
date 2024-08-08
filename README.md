@@ -9,15 +9,15 @@
   - [게임 플레이 방식](#게임-플레이-방식)
 
 ## 개요
-- 프로젝트 이름: SosoVillage 🏠
-- 프로젝트 지속기간: 2022.02-2022.06
-- 개발 엔진 및 언어: Unity & C#
-- 멤버: 팀 정현지(이정현, 김민정, 김민지)
+- 프로젝트 이름: Ajou Ramsey 🍡
+- 프로젝트 지속기간: 2023.05-2023.06
+- 샤용 기술 스택, 언어: Unity, C#,
+- 팀 구성: 강현서, 박선준, 양경덕, Nitu Cristina (개발 4)
 
 ## 게임 설명
-|![image](https://github.com/user-attachments/assets/9323a271-d584-4b59-84ca-5edb9af536df)|![image](https://github.com/user-attachments/assets/3dc7c51d-a3f2-4c9d-843f-7ad5b61e8fa2)|
+|<img src="(https://github.com/user-attachments/assets/9323a271-d584-4b59-84ca-5edb9af536df width="200" height="400"/>|![image](https://github.com/user-attachments/assets/3dc7c51d-a3f2-4c9d-843f-7ad5b61e8fa2)|
 |:---:|:---:|
-|시작 화면|사용자 정보 화면|
+|시작 화면|플레이 화면|
 
 긴장감, 압박감과 같이 일상에서 느낄 수 있는 부정적인 감정에서 벗어나 편안한 분위기 속에서 즐길 수 있는 힐링 게임을 만들고자 소소빌리지(SosoVillage)를 개발하게 되었습니다.<br>
 - 모험과 힐링을 동시에 즐겨라! ⚔️<br>
