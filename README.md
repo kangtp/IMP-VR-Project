@@ -15,9 +15,9 @@
 - 팀 구성: 강현서, 박선준, 양경덕, Nitu Cristina (개발 4)
 
 ## 게임 설명
-|<img src="https://github.com/user-attachments/assets/9323a271-d584-4b59-84ca-5edb9af536df" width="800" height="270"/>|![image](https://github.com/user-attachments/assets/3dc7c51d-a3f2-4c9d-843f-7ad5b61e8fa2)|
-|:---:|:---:|
-|시작 화면|플레이 화면|
+|<img src="https://github.com/user-attachments/assets/9323a271-d584-4b59-84ca-5edb9af536df" width="800" height="270"/>|![image](https://github.com/user-attachments/assets/3dc7c51d-a3f2-4c9d-843f-7ad5b61e8fa2)|![image](https://github.com/user-attachments/assets/46de2929-f74c-4025-b021-1d1eb23524fa)|
+|:---:|:---:|:---:|
+|시작 화면|식재료 꽂기|꼬치 전달|
 
 긴장감, 압박감과 같이 일상에서 느낄 수 있는 부정적인 감정에서 벗어나 편안한 분위기 속에서 즐길 수 있는 힐링 게임을 만들고자 소소빌리지(SosoVillage)를 개발하게 되었습니다.<br>
 - 모험과 힐링을 동시에 즐겨라! ⚔️<br>
